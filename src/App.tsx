@@ -564,7 +564,7 @@ export default function App() {
 
   // 3. Authenticated Dashboard Workspace Screen
   return (
-    <div className="min-h-screen bg-black text-slate-100 flex flex-col font-sans selection:bg-emerald-500/30 selection:text-emerald-200">
+    <div className="cluventa-viewport">
       {/* Top Header with Role Switcher & SIH 26189 Details */}
       <Header
         currentUser={currentUser}
@@ -581,16 +581,16 @@ export default function App() {
       />
 
       {/* Main App Body Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <main className="cluventa-app-main">
         {errorMessage && (
-          <div className="mb-6 p-3 bg-red-950/50 border border-red-800/80 text-red-200 rounded-xl text-xs flex items-center justify-between shadow-md">
+          <div className="cluventa-banner-alert">
             <div className="flex items-center gap-2">
               <AlertCircle className="w-4 h-4 text-red-400" />
               <span>{errorMessage}</span>
             </div>
             <button
               onClick={() => setErrorMessage(null)}
-              className="text-red-400 hover:text-red-200 text-sm font-bold px-2 py-0.5"
+              className="text-red-400 hover:text-red-200 text-sm font-bold px-2 py-0.5 cursor-pointer"
             >
               ✕
             </button>

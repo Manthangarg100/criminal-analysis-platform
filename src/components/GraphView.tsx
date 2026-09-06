@@ -661,6 +661,56 @@ export const GraphView: React.FC<GraphViewProps> = ({
     }
   };
 
+  const getNodeBorderClass = (node: SimNode) => {
+    const color = getNodeColor(node);
+    switch (color) {
+      case '#38bdf8':
+        return 'border-l-sky-400';
+      case '#34d399':
+        return 'border-l-emerald-400';
+      case '#fbbf24':
+        return 'border-l-amber-400';
+      case '#a78bfa':
+      case '#a855f7':
+        return 'border-l-purple-400';
+      case '#fb7185':
+      case '#f43f5e':
+      case '#ef4444':
+        return 'border-l-rose-400';
+      case '#22d3ee':
+        return 'border-l-cyan-400';
+      case '#f97316':
+        return 'border-l-orange-400';
+      default:
+        return 'border-l-emerald-400';
+    }
+  };
+
+  const getNodeBgClass = (node: SimNode) => {
+    const color = getNodeColor(node);
+    switch (color) {
+      case '#38bdf8':
+        return 'bg-sky-400 text-slate-950';
+      case '#34d399':
+        return 'bg-emerald-400 text-slate-950';
+      case '#fbbf24':
+        return 'bg-amber-400 text-slate-950';
+      case '#a78bfa':
+      case '#a855f7':
+        return 'bg-purple-400 text-slate-950';
+      case '#fb7185':
+      case '#f43f5e':
+      case '#ef4444':
+        return 'bg-rose-400 text-slate-950';
+      case '#22d3ee':
+        return 'bg-cyan-400 text-slate-950';
+      case '#f97316':
+        return 'bg-orange-400 text-slate-950';
+      default:
+        return 'bg-emerald-400 text-slate-950';
+    }
+  };
+
   const getNodeRadius = (node: SimNode) => {
     let base = 25;
     if (centralityMode === 'degree') {
@@ -1563,7 +1613,7 @@ export const GraphView: React.FC<GraphViewProps> = ({
 
             {/* Top-Right Floating Dossier / Fast Inspection HUD Card */}
             {hoveredNode ? (
-              <div className="absolute top-4 right-4 bg-slate-900/95 border border-slate-700/90 rounded-xl p-3 shadow-2xl backdrop-blur-md z-20 max-w-xs animate-in fade-in zoom-in-95 pointer-events-none border-l-4" style={{ borderLeftColor: getNodeColor(hoveredNode) }}>
+              <div className={`cluventa-node-tooltip animate-in fade-in zoom-in-95 ${getNodeBorderClass(hoveredNode)}`}>
                 <div className="flex items-center justify-between gap-2 mb-1.5">
                   <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">
                     {hoveredNode.type}

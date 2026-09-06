@@ -1,0 +1,353 @@
+/**
+ * Cluventa Intelligence Platform - Structured Architectural Component Classes
+ * Designed for semantic clarity, maintainable styling, and elimination of generic repetitive utility chains.
+ */
+
+/* ==========================================================================
+   1. CORE VIEWPORT & APP LAYOUT CONTAINERS
+   ========================================================================== */
+
+.cluventa-viewport {
+  min-height: 100vh;
+  background-color: #000000;
+  color: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+}
+
+.cluventa-app-main {
+  flex: 1 1 0%;
+  width: 100%;
+  max-width: 80rem; /* 1280px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .cluventa-app-main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cluventa-app-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ==========================================================================
+   2. SYSTEM HEADER & TOP NAVIGATION
+   ========================================================================== */
+
+.cluventa-header-bar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: rgba(7, 7, 9, 0.92);
+  border-bottom: 1px solid #1e293b;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.cluventa-header-inner {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .cluventa-header-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.cluventa-nav-group {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.cluventa-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  border: 1px solid transparent;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cluventa-nav-link:hover {
+  color: #ffffff;
+  background-color: #141418;
+  border-color: #222228;
+}
+
+.cluventa-nav-link-active {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.15);
+}
+
+/* ==========================================================================
+   3. ARCHITECTURAL SURFACES & CARDS
+   ========================================================================== */
+
+.cluventa-surface {
+  background-color: #0c0c0e;
+  border: 1px solid #1e293b;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.cluventa-surface-elevated {
+  background-color: #141418;
+  border: 1px solid #222228;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7);
+}
+
+.cluventa-card-panel {
+  padding: 1.25rem;
+  background-color: rgba(12, 12, 14, 0.8);
+  border: 1px solid #1e293b;
+  border-radius: 0.75rem;
+  transition: border-color 200ms ease;
+}
+
+.cluventa-card-panel:hover {
+  border-color: #334155;
+}
+
+.cluventa-metric-tile {
+  padding: 1rem 1.25rem;
+  background-color: #070709;
+  border: 1px solid #1e293b;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* ==========================================================================
+   4. INTERACTIVE BUTTONS & CONTROLS
+   ========================================================================== */
+
+.cluventa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.5rem 1rem;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cluventa-btn-primary {
+  background-color: #10b981;
+  color: #000000;
+  border: 1px solid #00ff87;
+  box-shadow: 0 0 14px rgba(0, 255, 135, 0.3);
+}
+
+.cluventa-btn-primary:hover {
+  background-color: #00ff87;
+  box-shadow: 0 0 18px rgba(0, 255, 135, 0.5);
+  transform: translateY(-1px);
+}
+
+.cluventa-btn-secondary {
+  background-color: #141418;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+}
+
+.cluventa-btn-secondary:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-color: #475569;
+}
+
+.cluventa-btn-ghost {
+  background-color: transparent;
+  color: #94a3b8;
+  border: 1px solid transparent;
+}
+
+.cluventa-btn-ghost:hover {
+  background-color: #141418;
+  color: #ffffff;
+  border-color: #222228;
+}
+
+/* ==========================================================================
+   5. STATUS CHIPS & BADGES
+   ========================================================================== */
+
+.cluventa-status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cluventa-status-chip-verified {
+  background-color: rgba(6, 78, 59, 0.6);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #6ee7b7;
+}
+
+.cluventa-status-chip-flagged {
+  background-color: rgba(136, 19, 55, 0.6);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  color: #fda4af;
+}
+
+.cluventa-status-chip-unverified {
+  background-color: rgba(120, 53, 15, 0.6);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fde68a;
+}
+
+/* ==========================================================================
+   6. EVIDENCE DRAWER & MODAL PANELS
+   ========================================================================== */
+
+.cluventa-drawer-surface {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 28rem;
+  background-color: #070709;
+  border-left: 1px solid #1e293b;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.8);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+.cluventa-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.cluventa-modal-panel {
+  background-color: #0c0c0e;
+  border: 1px solid #222228;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+  width: 100%;
+  max-width: 36rem;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   7. BRANDING & GLOW HELPERS
+   ========================================================================== */
+
+.cluventa-emblem-size-xs { width: 24px; height: 24px; }
+.cluventa-emblem-size-sm { width: 32px; height: 32px; }
+.cluventa-emblem-size-md { width: 42px; height: 42px; }
+.cluventa-emblem-size-lg { width: 56px; height: 56px; }
+.cluventa-emblem-size-xl { width: 72px; height: 72px; }
+
+.cluventa-tagline-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 135, 0.45);
+}
+
+.cluventa-tagline-plain {
+  text-shadow: none;
+}
+
+.cluventa-progress-track {
+  width: 6rem;
+  height: 0.5rem;
+  background-color: #070709;
+  border: 1px solid #1e293b;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.cluventa-banner-alert {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background-color: rgba(69, 10, 10, 0.5);
+  border: 1px solid rgba(185, 28, 28, 0.8);
+  color: #fecaca;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+}
+
+.cluventa-gis-canvas {
+  width: 100%;
+  min-height: 540px;
+  background-color: #000000;
+  border-radius: 0.5rem;
+}
+
+/* ==========================================================================
+   8. GRAPH HUD & TACTICAL TOOLTIP PANELS
+   ========================================================================== */
+
+.cluventa-node-tooltip {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(12, 12, 14, 0.95);
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  border-left-width: 4px;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 20;
+  max-width: 20rem;
+  pointer-events: none;
+}
+

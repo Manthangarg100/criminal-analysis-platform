@@ -82,7 +82,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-black text-slate-100 flex flex-col justify-center items-center p-4 relative font-sans selection:bg-emerald-500/30 selection:text-emerald-200">
+    <div className="cluventa-viewport justify-center items-center p-4 relative">
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#18181b20_1px,transparent_1px),linear-gradient(to_bottom,#18181b20_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none" />
 
@@ -103,7 +103,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
       </div>
 
       {/* Main Login Card */}
-      <div className="w-full max-w-2xl bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl relative z-10 space-y-6">
+      <div className="w-full max-w-2xl cluventa-surface-elevated p-6 sm:p-8 relative z-10 space-y-6">
         {/* Header */}
         <div className="text-center space-y-3 border-b border-slate-800/80 pb-6">
           <div className="flex justify-center">
@@ -246,7 +246,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
           <button
             type="submit"
             disabled={isAuthenticating}
-            className="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-xl shadow-emerald-950/60 flex items-center justify-center gap-2 cursor-pointer hover:scale-[1.01] active:scale-[0.99] disabled:opacity-70"
+            className="w-full py-3 rounded-xl cluventa-btn cluventa-btn-primary font-bold text-sm shadow-xl hover:scale-[1.01] active:scale-[0.99] disabled:opacity-70"
           >
             {isAuthenticating ? (
               <span className="flex items-center gap-2">

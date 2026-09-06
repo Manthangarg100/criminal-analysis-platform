@@ -71,9 +71,9 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-black/95 border-b border-neutral-800 backdrop-blur-md text-slate-100 shadow-md">
+    <header className="cluventa-header-bar text-slate-100 shadow-md">
       {/* Main Nav Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <div className="cluventa-header-inner gap-4">
         {/* Brand & Identity */}
         <div className="flex items-center gap-4">
           <div
@@ -95,7 +95,7 @@ export const Header: React.FC<HeaderProps> = ({
             {onGoToLanding && (
               <button
                 onClick={onGoToLanding}
-                className="px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-neutral-900 border border-transparent hover:border-neutral-800 transition-all flex items-center gap-1.5 cursor-pointer"
+                className="cluventa-nav-link"
                 title="Return to Cluventa Landing & Home Page"
               >
                 <Home className="w-4 h-4 text-emerald-400" />
@@ -105,10 +105,8 @@ export const Header: React.FC<HeaderProps> = ({
 
             <button
               onClick={() => onChangeView('dashboard')}
-              className={`px-3.5 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 ${
-                activeView === 'dashboard'
-                  ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-xs'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-800/70'
+              className={`cluventa-nav-link ${
+                activeView === 'dashboard' ? 'cluventa-nav-link-active' : ''
               }`}
             >
               <FileText className="w-4 h-4" />
@@ -118,10 +116,8 @@ export const Header: React.FC<HeaderProps> = ({
             {(currentUser.role === 'analyst' || currentUser.role === 'supervisor' || currentUser.role === 'admin') && (
               <button
                 onClick={() => onChangeView('cross_case')}
-                className={`px-3.5 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer ${
-                  activeView === 'cross_case'
-                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-xs'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/70'
+                className={`cluventa-nav-link ${
+                  activeView === 'cross_case' ? 'cluventa-nav-link-active' : ''
                 }`}
               >
                 <Search className="w-4 h-4" />
@@ -131,10 +127,8 @@ export const Header: React.FC<HeaderProps> = ({
 
             <button
               onClick={() => onChangeView('gis')}
-              className={`px-3.5 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 cursor-pointer ${
-                activeView === 'gis'
-                  ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-xs'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-800/70'
+              className={`cluventa-nav-link ${
+                activeView === 'gis' ? 'cluventa-nav-link-active' : ''
               }`}
             >
               <Compass className="w-4 h-4 text-emerald-400" />
@@ -144,10 +138,8 @@ export const Header: React.FC<HeaderProps> = ({
             {(currentUser.role === 'supervisor' || currentUser.role === 'admin') && (
               <button
                 onClick={() => onChangeView('supervisor')}
-                className={`px-3.5 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 ${
-                  activeView === 'supervisor'
-                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-xs'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/70'
+                className={`cluventa-nav-link ${
+                  activeView === 'supervisor' ? 'cluventa-nav-link-active' : ''
                 }`}
               >
                 <Eye className="w-4 h-4" />
@@ -158,10 +150,8 @@ export const Header: React.FC<HeaderProps> = ({
             {currentUser.role === 'admin' && (
               <button
                 onClick={() => onChangeView('admin')}
-                className={`px-3.5 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 ${
-                  activeView === 'admin'
-                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-xs'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/70'
+                className={`cluventa-nav-link ${
+                  activeView === 'admin' ? 'cluventa-nav-link-active' : ''
                 }`}
               >
                 <Sliders className="w-4 h-4" />
@@ -187,7 +177,7 @@ export const Header: React.FC<HeaderProps> = ({
           {currentUser.role === 'investigator' && (
             <button
               onClick={onOpenNewCaseModal}
-              className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-3.5 py-1.5 rounded-lg text-xs font-bold shadow-md shadow-emerald-950 flex items-center gap-2 transition-all cursor-pointer"
+              className="cluventa-btn cluventa-btn-primary"
             >
               <FileText className="w-4 h-4" />
               <span>+ New Case</span>

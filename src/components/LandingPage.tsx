@@ -36,10 +36,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   availableUsers,
 }) => {
   return (
-    <div className="min-h-screen bg-black text-slate-100 flex flex-col font-sans selection:bg-emerald-500/30 selection:text-emerald-200">
+    <div className="cluventa-viewport">
       {/* Top Navigation */}
-      <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-neutral-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <header className="cluventa-header-bar">
+        <div className="cluventa-header-inner">
           <div className="flex items-center gap-3">
             <CluventaLogo size="sm" variant="full" />
             <span className="hidden sm:inline-block text-[10px] uppercase font-mono tracking-wider bg-emerald-950/80 text-emerald-400 border border-emerald-700/60 px-1.5 py-0.5 rounded font-bold ml-1">
@@ -65,7 +65,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           <div className="flex items-center gap-3">
             <button
               onClick={onGoToLogin}
-              className="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold transition-all shadow-md shadow-emerald-950/60 flex items-center gap-2 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+              className="cluventa-btn cluventa-btn-primary gap-2 hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>Access Portal</span>
               <ArrowRight className="w-3.5 h-3.5" />

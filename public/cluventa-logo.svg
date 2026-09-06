@@ -1,7 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 140" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" width="100%" height="100%">
   <defs>
-    <!-- Neon green glow filter -->
-    <filter id="neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stopColor="#041209" />
+      <stop offset="100%" stopColor="#000000" />
+    </radialGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3.5" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
@@ -10,110 +15,144 @@
       </feMerge>
     </filter>
 
-    <filter id="star-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <!-- Drop Shadow for Tactile Depth -->
+    <filter id="tactile-shadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" floodColor="#011b0e" floodOpacity="0.95" />
     </filter>
   </defs>
 
-  <rect width="100%" height="100%" fill="#000000" />
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
 
-  <!-- EMBLEM ICON (Left) -->
-  <g transform="translate(10, 10)" filter="url(#neon-glow)">
-    <!-- Outer 3D Hexagonal Prism C - Front Face -->
-    <path
-      d="M 60 12 
-         L 100 35 
-         L 95 44 
-         L 65 27 
-         L 28 48 
-         L 28 72 
-         L 65 93 
-         L 95 76 
-         L 100 85 
-         L 60 108 
-         L 18 84 
-         L 18 36 Z"
-      fill="none"
-      stroke="#00ff87"
-      stroke-width="3"
-      stroke-linejoin="round"
-      stroke-linecap="round"
-    />
+  <g transform="translate(45, 18)" filter="url(#neon-glow)">
+    <!-- =================================================================
+        1. STENCIL WORDMARK: C i P H E R
+        ================================================================= -->
+    <g filter="url(#tactile-shadow)" fill="#00ff87">
+      <!-- --- LETTER C --- -->
+      <path
+        d="M 14 26
+           C 18.5 19 28 16 38 16.5
+           L 39 23
+           C 31.5 22.5 24 25 20.5 30
+           Z"
+      />
+      <path
+        d="M 12 36
+           C 11.5 41 11.5 46 12 51
+           L 18.5 50.5
+           C 18 46 18 41 18.5 36.5
+           Z"
+      />
+      <path
+        d="M 20.5 57
+           C 24 62 31.5 64.5 39 64
+           L 38 70.5
+           C 28 71 18.5 68 14 61
+           Z"
+      />
 
-    <!-- Inner Isometric Depth Lines (Isometric Wireframe Facets) -->
-    <path
-      d="M 60 12 L 50 24 L 28 37 M 100 35 L 88 44 M 60 108 L 50 96 L 28 83 M 100 85 L 88 76"
-      fill="none"
-      stroke="#10b981"
-      stroke-width="2"
-      stroke-opacity="0.8"
-      stroke-linejoin="round"
-      stroke-linecap="round"
-    />
-    
-    <!-- Secondary Inner Ridge to complete the 3D Prism -->
-    <path
-      d="M 75 42 L 40 58 L 40 68 L 75 80"
-      fill="none"
-      stroke="#00ff87"
-      stroke-width="2.5"
-      stroke-linejoin="round"
-      stroke-linecap="round"
-    />
+      <!-- --- LETTER i --- -->
+      <rect x="58" y="24" width="7" height="47" rx="2" />
 
-    <!-- Central 4-Point Radiant Sparkle Star -->
-    <path
-      d="M 60 44 Q 60 60 76 60 Q 60 60 60 76 Q 60 60 44 60 Q 60 60 60 44 Z"
-      fill="#00ff87"
-      filter="url(#star-glow)"
-    />
-    <!-- Sparkle core highlight -->
-    <circle cx="60" cy="60" r="2" fill="#ffffff" />
-  </g>
+      <!-- --- LETTER P --- -->
+      <rect x="85" y="24" width="7" height="47" rx="2" />
+      <path
+        d="M 92 24
+           L 112 24
+           C 119 24 123 28.5 123 35
+           C 123 41.5 119 46 112 46
+           L 92 46
+           L 92 39
+           L 110 39
+           C 113.5 39 116 37 116 35
+           C 116 33 113.5 31 110 31
+           L 92 31
+           Z"
+      />
 
-  <!-- WORDMARK: CLUVENTA (White Geometric Sans with Chevron A) -->
-  <g fill="#ffffff" transform="translate(148, 40)">
-    <!-- C -->
-    <path d="M 28 12 C 16 12 6 22 6 34 C 6 46 16 56 28 56 C 35 56 41 53 45 47 L 39 42 C 36 46 32 48 28 48 C 20 48 14 42 14 34 C 14 26 20 20 28 20 C 32 20 36 22 39 26 L 45 21 C 41 15 35 12 28 12 Z" />
-    
-    <!-- L -->
-    <path d="M 60 14 L 68 14 L 68 48 L 94 48 L 94 55 L 60 55 Z" />
-    
-    <!-- U -->
-    <path d="M 110 14 L 118 14 L 118 41 C 118 46 122 50 128 50 C 134 50 138 46 138 41 L 138 14 L 146 14 L 146 41 C 146 51 138 56 128 56 C 118 56 110 51 110 41 Z" />
-    
-    <!-- V -->
-    <path d="M 162 14 L 171 14 L 182 45 L 193 14 L 202 14 L 187 55 L 177 55 Z" />
-    
-    <!-- E -->
-    <path d="M 218 14 L 250 14 L 250 21 L 226 21 L 226 31 L 246 31 L 246 38 L 226 38 L 226 48 L 250 48 L 250 55 L 218 55 Z" />
-    
-    <!-- N -->
-    <path d="M 268 14 L 276 14 L 298 44 L 298 14 L 306 14 L 306 55 L 298 55 L 276 25 L 276 55 L 268 55 Z" />
-    
-    <!-- T -->
-    <path d="M 318 14 L 354 14 L 354 21 L 340 21 L 340 55 L 332 55 L 332 21 L 318 21 Z" />
-    
-    <!-- Stylized Chevron A (Λ without crossbar) -->
-    <path d="M 382 14 L 391 14 L 409 55 L 400 55 L 386.5 24 L 373 55 L 364 55 Z" />
-  </g>
+      <!-- --- LETTER H --- -->
+      <rect x="143" y="24" width="7" height="47" rx="2" />
+      <rect x="171" y="24" width="7" height="47" rx="2" />
+      <path
+        d="M 150 44
+           L 165 44
+           L 165 51
+           L 150 51
+           Z"
+      />
+      <path
+        d="M 144 47
+           L 150 44
+           L 150 51
+           Z"
+        fill="#059669"
+      />
 
-  <!-- SUBTITLE: INSIGHTS • CONNECTIONS • ACTION (Neon Green Tracking) -->
-  <g fill="#00ff87" filter="url(#star-glow)">
-    <text
-      x="152"
-      y="118"
-      font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif"
-      font-size="11.5"
-      font-weight="700"
-      letter-spacing="0.32em"
-      fill="#00ff87"
-    >
-      INSIGHTS  •  CONNECTIONS  •  ACTION
-    </text>
+      <!-- --- LETTER E --- -->
+      <rect x="193" y="24" width="29" height="7" rx="2" />
+      <rect x="193" y="44" width="24" height="7" rx="2" />
+      <rect x="193" y="64" width="29" height="7" rx="2" />
+
+      <!-- --- LETTER R --- -->
+      <path
+        d="M 241 24
+           L 266 24
+           C 273 24 277 28.5 277 35
+           C 277 41.5 273 46 266 46
+           L 246 46
+           L 246 39
+           L 264 39
+           C 267.5 39 270 37 270 35
+           C 270 33 267.5 31 264 31
+           L 241 31
+           Z"
+      />
+      <path
+        d="M 252 44
+           L 259 44
+           L 273 65
+           L 278 65
+           L 278 71
+           L 268 71
+           Z"
+      />
+    </g>
+
+    <!-- =================================================================
+        2. ACCENT BAR & TWO DOTS
+        ================================================================= -->
+    <g fill="#00ff87">
+      <rect x="14" y="92" width="68" height="5.5" rx="2.75" />
+      <circle cx="97" cy="94.75" r="4.25" />
+      <circle cx="115" cy="94.75" r="4.25" />
+    </g>
+
+    <!-- =================================================================
+        3. STACKED TAGLINE: SMARTER / INVESTIGATIONS
+        ================================================================= -->
+    <g fill="#00ff87">
+      <text
+        x="142"
+        y="93"
+        font-family="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif"
+        font-size="12"
+        font-weight="700"
+        letter-spacing="0.28em"
+        fill="#00ff87"
+      >
+        SMARTER
+      </text>
+      <text
+        x="142"
+        y="110"
+        font-family="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif"
+        font-size="12"
+        font-weight="700"
+        letter-spacing="0.28em"
+        fill="#00ff87"
+      >
+        INVESTIGATIONS
+      </text>
+    </g>
   </g>
 </svg>

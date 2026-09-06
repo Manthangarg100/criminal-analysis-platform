@@ -147,7 +147,7 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
   }
 
   return (
-    <div className="fixed inset-y-0 right-0 w-full sm:w-[460px] bg-slate-950 border-l border-slate-800 shadow-2xl z-50 flex flex-col text-slate-200 overflow-hidden">
+    <div className="cluventa-drawer-surface sm:max-w-[460px] overflow-hidden text-slate-200">
       {/* Header */}
       <div className="p-4 border-b border-slate-800 bg-slate-900 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
@@ -187,9 +187,9 @@ export const EvidenceDrawer: React.FC<EvidenceDrawerProps> = ({
           <div className="flex items-center justify-between pt-2 border-t border-slate-800 text-[11px]">
             <span className="text-slate-400">Confidence Score:</span>
             <div className="flex items-center gap-2">
-              <div className="w-24 h-2 bg-slate-950 border border-slate-800 rounded-full overflow-hidden">
+              <div className="cluventa-progress-track">
                 <div
-                  className={`h-full rounded-full ${
+                  className={`h-full rounded-full transition-all duration-300 ${
                     (isNode ? selectedNode!.confidenceScore : selectedEdge!.confidenceScore) >= 0.9
                       ? 'bg-emerald-500'
                       : (isNode ? selectedNode!.confidenceScore : selectedEdge!.confidenceScore) >= 0.75
