@@ -1,0 +1,6 @@
+{
+  "name": "Cluventa — Criminal Network Intelligence Platform",
+  "description": "An explainable, evidence-linked criminal network intelligence, geospatial GIS, and analysis platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

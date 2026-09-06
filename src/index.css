@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-950: #000000;
+  --color-slate-900: #070709;
+  --color-slate-850: #0c0c0e;
+  --color-slate-800: #141418;
+  --color-slate-700: #222228;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #000000 !important;
+    @apply bg-black text-slate-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-200;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  #root {
+    background-color: #000000;
+    min-height: 100vh;
+  }
+
+  /* Custom subtle dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1c1917;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #10b981;
+  }
+
+  /* Ensure Leaflet container stays dark black */
+  .leaflet-container {
+    background-color: #000000 !important;
+  }
+}
