@@ -1,0 +1,17 @@
+{
+  "name": "Cluventa Criminal Intelligence Platform",
+  "short_name": "Cluventa",
+  "description": "Criminal Network Intelligence, Geospatial GIS, and Case Analysis Platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00ff87",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

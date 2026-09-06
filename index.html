@@ -3,21 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cluventa — Criminal Network Intelligence Platform</title>
-    <meta name="description" content="An explainable, evidence-linked criminal network intelligence, geospatial GIS, and analysis platform." />
-    <meta property="og:title" content="Cluventa — Criminal Network Intelligence Platform" />
-    <meta property="og:description" content="An explainable, evidence-linked criminal network intelligence, geospatial GIS, and analysis platform." />
+    <title>Cluventa — Criminal Network Intelligence & GIS Platform</title>
+    <meta name="description" content="An explainable, evidence-linked criminal network intelligence, geospatial GIS, and analysis platform designed for law enforcement and investigative teams." />
+    <meta name="author" content="Cluventa Intelligence Systems" />
+    <meta name="keywords" content="criminal intelligence, network graph analysis, GIS geospatial tracking, syndicate investigation, law enforcement intelligence, crime link analysis" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="application-name" content="Cluventa" />
+    <meta name="apple-mobile-web-app-title" content="Cluventa" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cluventa Intelligence" />
+    <meta property="og:title" content="Cluventa — Criminal Network Intelligence & GIS Platform" />
+    <meta property="og:description" content="Evidence-linked syndicate mapping, criminal network graph analysis, geospatial GIS tracking, and forensic case dossier generation." />
+    <meta property="og:image" content="/cluventa-logo.svg" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cluventa — Criminal Network Intelligence & GIS Platform" />
+    <meta name="twitter:description" content="Evidence-linked syndicate mapping, criminal network graph analysis, geospatial GIS tracking, and forensic case dossier generation." />
+    <meta name="twitter:image" content="/cluventa-logo.svg" />
+
+    <!-- Favicon & Manifest -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Cluventa",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All",
+      "description": "Explainable criminal network intelligence, geospatial GIS mapping, and evidentiary case analysis platform.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
   </head>
-  <body class="bg-black text-slate-100">
-    <div id="root" class="bg-black min-h-screen"></div>
+  <body class="bg-black text-slate-100 antialiased selection:bg-emerald-500 selection:text-black">
+    <div id="root" class="bg-black min-h-screen">
+      <!-- Semantic Initial Content for SEO, Web Crawlers, and Scanners -->
+      <header class="border-b border-neutral-800 bg-neutral-950 px-6 py-4">
+        <nav aria-label="Main Navigation" class="max-w-7xl mx-auto flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img src="/favicon.svg" alt="Cluventa Emblem" width="32" height="32" class="h-8 w-8" />
+            <span class="font-extrabold text-xl tracking-tight text-white">CLUVENTA</span>
+          </div>
+          <div class="text-xs text-neutral-400 font-mono">
+            SECURE ACCESS PORTAL
+          </div>
+        </nav>
+      </header>
+
+      <main class="max-w-7xl mx-auto px-6 py-16 space-y-12">
+        <section aria-labelledby="hero-heading" class="text-center space-y-4">
+          <h1 id="hero-heading" class="text-4xl font-extrabold text-white tracking-tight sm:text-5xl">
+            Criminal Network Intelligence &amp; GIS Analysis
+          </h1>
+          <p class="text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+            Cluventa accelerates complex syndicate investigations through interactive link-analysis graphs, geospatial cell tower triangulation, evidence verification queues, and audit-logged dossier compilation.
+          </p>
+        </section>
+
+        <section aria-labelledby="capabilities-heading" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-2">
+            <h2 id="capabilities-heading" class="text-lg font-bold text-emerald-400">Network Link Analysis</h2>
+            <p class="text-sm text-neutral-400">
+              Interactive entity-relationship graphs highlighting syndicate kingpins, communication conduits, and financial facilitators.
+            </p>
+          </article>
+          <article class="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-2">
+            <h2 class="text-lg font-bold text-emerald-400">Geospatial Intelligence</h2>
+            <p class="text-sm text-neutral-400">
+              Spatial-temporal tracking of safehouses, border cross-points, vehicle transit corridors, and tower dump triangulations.
+            </p>
+          </article>
+          <article class="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-2">
+            <h2 class="text-lg font-bold text-emerald-400">Evidentiary Chain of Custody</h2>
+            <p class="text-sm text-neutral-400">
+              Cryptographic hash verification, timestamped investigator reviews, and tamper-evident audit logging for court admissibility.
+            </p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="border-t border-neutral-800 py-8 text-center text-xs text-neutral-500">
+        <p>&copy; 2026 Cluventa Intelligence Systems. All rights reserved. Restricted Law Enforcement &amp; Authorized Personnel Access.</p>
+      </footer>
+    </div>
+
+    <noscript>
+      <div class="p-6 text-center text-red-400">
+        JavaScript is required to operate the interactive Cluventa criminal analysis workspace.
+      </div>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

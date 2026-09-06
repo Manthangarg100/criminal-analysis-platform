@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React from 'react';
 
 interface CluventaLogoProps {
@@ -20,6 +15,8 @@ export const CluventaEmblem: React.FC<{ size?: number; className?: string; glow?
 }) => {
   return (
     <div
+      role="img"
+      aria-label="Cluventa Security Emblem"
       className={`relative inline-flex items-center justify-center select-none flex-shrink-0 ${className}`}
       style={{ width: size, height: size }}
     >
@@ -27,6 +24,7 @@ export const CluventaEmblem: React.FC<{ size?: number; className?: string; glow?
         viewBox="0 0 120 120"
         className="w-full h-full overflow-visible"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
         <defs>
           <filter id={`emblem-glow-${size}`} x="-30%" y="-30%" width="160%" height="160%">
@@ -40,7 +38,6 @@ export const CluventaEmblem: React.FC<{ size?: number; className?: string; glow?
         </defs>
 
         <g filter={`url(#emblem-glow-${size})`}>
-          {/* Outer 3D Hexagonal Prism C */}
           <path
             d="M 60 12 
                L 100 35 
@@ -61,7 +58,6 @@ export const CluventaEmblem: React.FC<{ size?: number; className?: string; glow?
             strokeLinecap="round"
           />
 
-          {/* Inner 3D wireframe facet bevels */}
           <path
             d="M 60 12 L 50 24 L 28 37 M 100 35 L 88 44 M 60 108 L 50 96 L 28 83 M 100 85 L 88 76"
             fill="none"
@@ -72,7 +68,6 @@ export const CluventaEmblem: React.FC<{ size?: number; className?: string; glow?
             strokeLinecap="round"
           />
 
-          {/* Inner ridge completing the 3D C loop */}
           <path
             d="M 75 42 L 40 58 L 40 68 L 75 80"
             fill="none"
@@ -82,12 +77,10 @@ export const CluventaEmblem: React.FC<{ size?: number; className?: string; glow?
             strokeLinecap="round"
           />
 
-          {/* Central 4-Point Sparkle Star */}
           <path
             d="M 60 42 Q 60 60 78 60 Q 60 60 60 78 Q 60 60 42 60 Q 60 60 60 42 Z"
             fill="#00ff87"
           />
-          {/* Core White Highlight */}
           <circle cx="60" cy="60" r="2.2" fill="#ffffff" />
         </g>
       </svg>
@@ -102,7 +95,6 @@ export const CluventaLogo: React.FC<CluventaLogoProps> = ({
   className = '',
   glow = true,
 }) => {
-  // Dimensions per size
   const config = {
     xs: { emblemSize: 24, textSize: 'text-sm', subSize: 'text-[7px]', gap: 'gap-2', track: 'tracking-[0.2em]' },
     sm: { emblemSize: 32, textSize: 'text-lg', subSize: 'text-[9px]', gap: 'gap-2.5', track: 'tracking-[0.24em]' },
@@ -116,30 +108,30 @@ export const CluventaLogo: React.FC<CluventaLogoProps> = ({
   }
 
   return (
-    <div className={`inline-flex items-center ${config.gap} select-none ${className}`}>
-      {/* Emblem Icon */}
+    <div
+      role="banner"
+      aria-label="Cluventa Intelligence"
+      className={`inline-flex items-center ${config.gap} select-none ${className}`}
+    >
       <CluventaEmblem size={config.emblemSize} glow={glow} />
 
-      {/* Typography Block */}
       <div className="flex flex-col justify-center">
-        {/* Main Brand Wordmark: CLUVENTΛ */}
         <div
           className={`${config.textSize} font-extrabold text-white font-sans leading-none tracking-[0.16em] flex items-center`}
         >
           <span>CLUVENT</span>
-          {/* Stylized Lambda / Chevron A without horizontal crossbar */}
           <span className="inline-block relative">
             <svg
               viewBox="0 0 40 46"
               className="h-[0.88em] w-auto inline-block -mt-[0.05em] overflow-visible"
               fill="currentColor"
+              aria-hidden="true"
             >
               <path d="M 20 2 L 38 44 L 30 44 L 20 18 L 10 44 L 2 44 Z" />
             </svg>
           </span>
         </div>
 
-        {/* Tagline: INSIGHTS • CONNECTIONS • ACTION */}
         {variant === 'full' && showTagline && (
           <div
             className={`${config.subSize} font-bold text-[#00ff87] font-sans ${config.track} uppercase mt-1 leading-tight flex items-center gap-1.5`}

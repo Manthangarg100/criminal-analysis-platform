@@ -75,7 +75,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-20 border-b border-slate-800/60">
+      <main className="flex-1">
+        <section className="relative overflow-hidden pt-16 pb-20 border-b border-slate-800/60">
         {/* Subtle grid background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
@@ -398,6 +399,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           </div>
         </div>
       </section>
+      </main>
 
       {/* Footer CTA */}
       <footer className="py-12 bg-black border-t border-neutral-800">

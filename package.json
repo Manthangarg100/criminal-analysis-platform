@@ -1,7 +1,8 @@
 {
-  "name": "react-example",
+  "name": "cluventa-platform",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.4.1",
+  "description": "Criminal Network Intelligence, Geospatial GIS, and Case Analysis Platform",
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
