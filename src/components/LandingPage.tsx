@@ -415,11 +415,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               onClick={onGoToLogin}
               className="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all shadow-lg shadow-emerald-950 cursor-pointer"
             >
-              Sign In to Cluventa Workspace
+              Sign In to CIPHER Workspace
             </button>
           </div>
           <p className="text-[11px] font-mono text-slate-400 pt-4">
-            © 2026 Cluventa Intelligence Platform • MHA DPDP Act Compliant Architecture
+            © 2026 CIPHER Intelligence Platform • MHA DPDP Act Compliant Architecture
           </p>
         </div>
       </footer>

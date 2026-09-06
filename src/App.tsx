@@ -31,6 +31,7 @@ import { NewCaseModal } from './components/NewCaseModal.tsx';
 import { EvidenceDrawer } from './components/EvidenceDrawer.tsx';
 import { LandingPage } from './components/LandingPage.tsx';
 import { LoginPage } from './components/LoginPage.tsx';
+import { CluventaLogo, CluventaEmblem } from './components/CluventaLogo.tsx';
 import { Shield, Loader2, AlertCircle, Home, ArrowLeft } from 'lucide-react';
 import {
   INITIAL_CASES,
@@ -509,17 +510,15 @@ export default function App() {
 
   if (isLoading || !currentUser || !systemConfig) {
     return (
-      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-slate-300 p-4 space-y-4">
-        <div className="w-14 h-14 rounded-2xl bg-emerald-950/60 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shadow-lg shadow-emerald-950/60 animate-pulse">
-          <Shield className="w-7 h-7 text-emerald-400" />
-        </div>
-        <div className="text-center space-y-1">
-          <h2 className="text-lg font-bold text-white font-sans tracking-wide">
-            Cluventa Intelligence Platform
-          </h2>
-          <p className="text-xs text-emerald-400/80 font-mono">
-            Loading secure workspace...
-          </p>
+      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-slate-300 p-4 space-y-6">
+        <div className="flex flex-col items-center justify-center space-y-4">
+          <CluventaLogo size="lg" variant="full" glow={true} />
+          <div className="flex items-center gap-2 pt-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+            <p className="text-xs text-emerald-400/90 font-mono tracking-widest uppercase">
+              Initializing Secure Investigation Terminal...
+            </p>
+          </div>
         </div>
         <Loader2 className="w-6 h-6 text-emerald-400 animate-spin" />
       </div>

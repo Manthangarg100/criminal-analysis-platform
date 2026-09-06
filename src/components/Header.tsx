@@ -85,7 +85,7 @@ export const Header: React.FC<HeaderProps> = ({
               }
             }}
             className="flex items-center cursor-pointer group hover:opacity-90 transition-opacity"
-            title="Go to Cluventa Home Page"
+            title="Go to CIPHER Home Page"
           >
             <CluventaLogo size="sm" variant="full" />
           </div>
@@ -96,7 +96,7 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 onClick={onGoToLanding}
                 className="cluventa-nav-link"
-                title="Return to Cluventa Landing & Home Page"
+                title="Return to CIPHER Landing & Home Page"
               >
                 <Home className="w-4 h-4 text-emerald-400" />
                 <span>Home</span>
